@@ -56,4 +56,12 @@ $(function () {
       $(this).next('span.error').remove();
     }
   })
+
+  //todoボタン押下時
+  $('.submitBtn').on('click', function (e) {
+    if ($('#calender_day').val() === '') {
+      alert('日付を入力してください')
+      e.preventDefault();
+    }
+  })
 });
