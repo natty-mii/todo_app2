@@ -49,6 +49,9 @@ test:
 #
 production:
   <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
   database: todo_list_production
   username: todo_list
   password: <%= ENV['TODO_LIST_DATABASE_PASSWORD'] %>
