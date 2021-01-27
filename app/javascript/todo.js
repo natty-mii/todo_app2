@@ -15,12 +15,18 @@ $(function () {
   $('.hidden-destroy').hide();
 
   $('#todo-box').on('change', '.js-file', function (e) {
+
+    //入力欄を5つまでにする
+    const jsnum = $('.js-file').length;
+    //入力欄が4つまである時に新しい入力欄を追加する
+    if (jsnum < 5)
     //textIndexの先頭の数字を使い、インプットを作る
     $('#todo-box').append(buildInput(textIndex[0]));
     //先頭の数字を削除
     textIndex.shift();
     //末尾の数に1を足した数を追加
     textIndex.push(textIndex[textIndex.length - 1] + 1)
+
   });
 
   $('#todo-box').on('click', '.js-remove', function () {
@@ -50,8 +56,4 @@ $(function () {
       $(this).next('span.error').remove();
     }
   })
-
-  //入力欄が6つになるとアラートが出る
-  const alert = $('.js-file.required').val();
-  console.log(alert);
 });
