@@ -1,0 +1,8 @@
+.wrapper
+  .contents_all
+    .register_wrap
+      %i.far.fa-calendar-alt
+      = link_to '明日の５つのやるコト登録する', new_calender_path, data:{turbolinks: "false"}, class: "register_btn"
+      %i.far.fa-calendar-alt
+    .todos
+      = render @calenders

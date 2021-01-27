@@ -1,0 +1,21 @@
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  .contents_all {
+    width: 400px;
+    margin: 0 auto;
+    .register_wrap {
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid black;
+      .register_btn {
+        color: green;
+        font-size: 1.2em;
+      }
+
+    }
+
+  }
+}
+

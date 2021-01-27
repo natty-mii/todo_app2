@@ -1,0 +1,31 @@
+.hidden-destroy {
+  display: none;
+}
+
+.contents {
+  margin-bottom: 20px;
+  background-color: wheat;
+  border-radius: 10px;
+  .contents-day {
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 10px;
+    border-bottom: 1px solid gray;
+  }
+  .contents-wrap {
+    .contens-sentence {
+
+    }
+  }
+  .changeDelete {
+    margin-top: 20px;
+    text-align: center;
+    .change {
+      margin-right: 10px;
+    }
+    .delete {
+      margin-left: 10px;
+      color: red;
+    }
+  }
+}

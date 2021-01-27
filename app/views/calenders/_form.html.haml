@@ -1,0 +1,25 @@
+.form_Wrapper
+  .form
+    = form_with model: @calender do |f|
+      .day_all
+        .day
+          日付
+        .day-input
+        = f.text_field :day, class: 'required',placeholder: "例）2021年1月1日"
+      .todo-five
+        やること(最大５つ)
+      #todo-box
+        = f.fields_for :todos do |todo|
+          .js-file_group{data:{index: todo.index}}
+            = todo.text_field :sentence, class: "js-file required"
+            %span.js-remove 削除
+
+          - if @calender.persisted?
+            = todo.check_box :_destroy, data:{index: todo.index }, class: 'hidden-destroy'
+
+        - if @calender.persisted?
+          .js-file_group{data:{index: @calender.todos.count}}
+            = text_field :sentence, name: "calender[todos_attributes][#{@calender.todos.count}][sentece]", class: "js-file required"
+            %span.js-remove 削除
+      .submit-btn
+        = f.submit "Todo作成", class: 'submitBtn'

@@ -1,0 +1,56 @@
+.form_Wrapper {
+  width: 100vw;
+  height: 100vh;
+  .form {
+    width: 450px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: wheat;
+    border-radius: 10px;
+    .day_all {
+      display: flex;
+      justify-content: center;
+      padding-top: 10px;
+      .day {
+        font-weight: bold;
+        margin-right: 5px;
+      }
+      .required {
+        width: 300px;
+      }
+    }
+    .todo-five {
+      font-weight: bold;
+      margin-top: 20px;
+      margin-left: 55px;
+    }
+    #todo-box {
+      .js-file_group {
+        width: 400px;
+        margin-left: 90px;
+        .js-file.required {
+          width: 300px;
+          margin-top: 10px;
+        }
+      }
+    }
+    .submit-btn {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      padding-bottom: 20px;
+      .submitBtn {
+        color: white;
+        background-color: green;
+        width: 150px;
+        height: 30px;
+        border: none;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+.js-remove {
+  color: red;
+}

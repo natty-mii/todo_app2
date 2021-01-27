@@ -1,0 +1,10 @@
+.contents
+  .contents-day
+    = calender.day
+  .contents-wrap
+  - calender.todos.each do |todo|
+    .contens-sentence
+      %li= todo.sentence
+  .changeDelete
+    -# = link_to '変更', edit_calender_path(calender), data:{turbolinks: "false"}, class: "change"
+    = link_to '削除', calender_path(calender), method: :delete, class: :delete
