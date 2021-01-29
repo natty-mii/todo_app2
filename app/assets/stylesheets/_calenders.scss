@@ -13,8 +13,16 @@
     border-bottom: 1px solid gray;
   }
   .contents-wrap {
-    .contens-sentence {
-
+    .contents-sentence {
+      font-size: 20px;
+    }
+  }
+  .created_wrap {
+    .created_days {
+      color: gray;
+      font-size: 9px;
+      text-align: right;
+      margin-right: 5px;
     }
   }
   .changeDelete {

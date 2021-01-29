@@ -2,9 +2,14 @@
   .contents-day
     = calender.day
   .contents-wrap
-  - calender.todos.each do |todo|
-    .contens-sentence
-      %li= todo.sentence
+    - calender.todos.each do |todo|
+      .contents-sentence
+        ・
+        = todo.sentence
+
+  .created_wrap
+    .created_days
+      = calender.created_at.strftime("%Y年%m月%d日 %H時%M分")
   .changeDelete
     -# = link_to '変更', edit_calender_path(calender), data:{turbolinks: "false"}, class: "change"
     = link_to '削除', calender_path(calender), method: :delete, class: :delete
